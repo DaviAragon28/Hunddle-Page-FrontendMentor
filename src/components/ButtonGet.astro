@@ -1,0 +1,40 @@
+---
+const { addClass } = Astro.props;
+---
+
+<button class={`${addClass ? "new" : ""}`}>Get Started For Free</button>
+
+<style>
+	button {
+		padding: 15px 0;
+		border-radius: 30px;
+		border: none;
+		background-color: var(--Pink);
+		font-size: 16px;
+		font-weight: bold;
+		color: white;
+		cursor: pointer;
+	}
+
+	.new {
+		width: max-content;
+		margin: 0 auto;
+		padding: 15px 10px;
+	}
+
+	button:hover {
+		filter: brightness(180%);
+	}
+
+	@media (min-width: 768px) {
+		button {
+			width: max-content;
+			margin: 0;
+			padding: 15px 20px;
+		}
+
+		.new {
+			padding: 15px 20px;
+		}
+	}
+</style>

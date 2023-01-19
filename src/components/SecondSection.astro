@@ -1,0 +1,49 @@
+---
+import Card from "./Card.astro";
+---
+
+<section>
+    <Card
+        image="/images/illustration-grow-together.svg"
+        title="Grow Together"
+        body="Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form."
+        reverse={false}
+    />
+    <Card
+        image="/images/illustration-flowing-conversation.svg"
+        title="Flowing Conversations"
+        body="You wouldn't paginate a conversation in real life, so why do it online? Our threads have  just-in-time loading for a more natural flow."
+        reverse
+    />
+    <Card
+        image="/images/illustration-your-users.svg"
+        title="Your Users"
+        body="It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately."
+        reverse={false}
+    />
+</section>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 40px 20px;
+        padding-bottom: 100px;
+        gap: 30px;
+    }
+
+    @media (min-width: 768px) {
+        section {
+            padding-top: 80px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        section {
+            padding-bottom: 200px;
+            padding-top: 100px;
+            gap: 50px;
+        }
+    }
+</style>

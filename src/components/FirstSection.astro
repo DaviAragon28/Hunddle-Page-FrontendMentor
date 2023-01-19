@@ -1,0 +1,96 @@
+---
+import ButtonGet from "./ButtonGet.astro";
+---
+
+<section>
+	<div>
+		<h1>Build The Community Your Fans Will Love</h1>
+		<p>
+			Huddle re-imagines the way we build communities. You have a voice,
+			but so does your audience. Create connections with your users as you
+			engage in genuine discussion.
+		</p>
+		<ButtonGet addClass={false} />
+	</div>
+	<img src="/images/illustration-mockups.svg" alt="Mockups" />
+</section>
+
+<style>
+	section {
+		background-image: url("/images/bg-hero-mobile.svg");
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		margin-top: 40px;
+		text-align: center;
+		padding: 0px 30px;
+		padding-bottom: 50px;
+	}
+
+	section div {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+	h1 {
+		font-size: 28px;
+	}
+
+	img {
+		padding-top: 40px;
+		max-width: 550px;
+	}
+
+	@media (min-width: 768px) {
+		section {
+			flex-direction: row;
+			text-align: left;
+			background-image: url("/images//bg-hero-desktop.svg");
+		}
+
+		section div {
+			width: 400px;
+			gap: 15px;
+		}
+
+		h1 {
+			font-size: 24px;
+		}
+
+		img {
+			width: 350px;
+			padding: 0;
+			flex: 1 1 0%;
+			object-fit: contain;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		section {
+			padding: 0 50px;
+			padding-bottom: 70px;
+			justify-content: space-around;
+		}
+
+		section div {
+			justify-content: center;
+		}
+
+		h1 {
+			font-size: 24px;
+		}
+	}
+
+	@media (min-width: 1224px) {
+		h1 {
+			font-size: 36px;
+		}
+
+		section div {
+			gap: 20px
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+</style>

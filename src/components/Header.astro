@@ -1,0 +1,79 @@
+---
+// import Logo from '/images/logo.svg'
+---
+
+<header>
+    <nav>
+        <ul>
+            <li><img src='/images/logo.svg' alt="Logo"></li>
+            <li><button>Try it free</button></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 23px 15px;
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+    img {
+        width: 120px;
+    }
+
+    button {
+        padding: 5px 15px;
+        border-radius: 30px;
+        border: none;
+        box-shadow: 3px 2px 4px #00000036;
+        font-weight: bold;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    button:hover {
+        color: var(--GrayishBlue);
+    }
+
+    @media (min-width: 768px) {
+        nav ul {
+            padding: 30px;
+        }
+
+        img {
+            width: 150px;
+        }
+
+        button {
+            padding: 10px 25px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        nav ul {
+            padding: 40px 30px;
+            
+        }
+
+        img {
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 35px;
+        }
+    }
+
+    @media (min-width: 1224px) {
+        nav ul {
+            padding: 40px 120px;
+
+        }
+    }
+</style>

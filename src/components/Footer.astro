@@ -1,0 +1,161 @@
+---
+import CardFloat from "./CardFloat.astro";
+---
+
+<footer>
+    
+    <ul class="info">
+        <li><img class="logo" src="/images/logo-footer.svg" alt="Logo" /></li>
+        <li>
+            <img src="/images/icon-location.svg" alt="icon-location" />
+            <p class="lorem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+        </li>
+        <li>
+            <img src="/images/icon-phone.svg" alt="icon-phone" />
+            <p>+1-543-123-4567</p>
+        </li>
+        <li>
+            <img src="/images/icon-email.svg" alt="icon-email" />
+            <p>example@huddle.com</p>
+        </li>
+    </ul>
+    <ul class="links">
+        <div>
+            <li>About Us</li>
+            <li>What We Do</li>
+            <li>FAQ</li>
+        </div>
+        <div>
+            <li>Career</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+        </div>
+    </ul>
+    <ul class="social-media">
+        <div>
+            <li><ion-icon name="logo-facebook"></ion-icon></li>
+            <li><ion-icon name="logo-twitter"></ion-icon></li>
+            <li><ion-icon name="logo-instagram"></ion-icon></li>
+        </div>
+        <div>
+            <p>&copy; Copyright 2018 Huddle. All rights reserved.</p>
+        </div>
+    </ul>
+    <CardFloat  />
+</footer>
+
+<style>
+    footer {
+        padding: 40px 20px;
+        padding-top: 130px;
+        color: rgba(255, 255, 255, 0.788);
+        background-color: var(--VeryDarkCyan);
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .info,
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+
+    .logo {
+        width: 150px;
+    }
+
+    footer .info li {
+        display: flex;
+        gap: 15px;
+        font-size: 14px;
+        align-items: center;
+    }
+
+    .links li {
+        list-style: none;
+        font-size: 17px;
+    }
+
+    .links div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-media  li {
+        list-style: none;
+        padding: 5px;
+    }
+
+    .social-media  div:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    ion-icon {
+        font-size: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.788);
+        padding: 7px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    ion-icon:hover {
+        border-color: var(--Pink);
+        color: var(--Pink);
+    }
+    .social-media div p {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        footer {
+            flex-direction: row;
+            justify-content: space-around;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 50px;
+        }
+
+        .social-media  {
+            justify-content: space-around;
+        }
+
+        .info .lorem {
+            width: 200px
+        }
+
+        .links {
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .links li:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    @media (min-width: 1224px) {
+        .info {
+            gap: 30px
+        }
+    }
+</style>
